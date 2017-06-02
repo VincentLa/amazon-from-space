@@ -8,7 +8,7 @@ def create_data_subdirectory():
     try:
         os.makedirs('data')
     except OSError as exception:
-        if exception.errno != errno.EXIST:
+        if exception.errno != errno.EEXIST:
             raise
 
 def download_file(url):
